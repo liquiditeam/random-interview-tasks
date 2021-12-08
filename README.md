@@ -1,6 +1,16 @@
 Important: This is in a broken state at the moment
 
-Database is setup with: docker run -t -i -e POSTGRES_DB=dogs -e POSTGRES_USER=dogs -e POSTGRES_PASSWORD=dogs -p 5432:5432 postgres
+Database is setup with: 
+
+```
+docker run -t -i -e POSTGRES_DB=dogs -e POSTGRES_USER=dogs -e POSTGRES_PASSWORD=dogs -p 5432:5432 postgres
+```
+
+The database is migrated by running something like: (make sure you have the tools installed, like dotenv and dbmate)
+
+```
+dotenv dbmate up
+```
 
 - Make sure we are actually connecting to a database on startup and provide the pool to the db queries
 - Harmonize the types in the DB and GQL, especially the ID: Either use UUID for the DB or transform on the fly
