@@ -6,7 +6,8 @@ Database is setup with:
 docker run -t -i -e POSTGRES_DB=dogs -e POSTGRES_USER=dogs -e POSTGRES_PASSWORD=dogs -p 5432:5432 postgres
 ```
 
-The database is migrated by running something like: (make sure you have the tools installed, like dotenv and dbmate)
+- Make sure you have the tools installed, like dotenv and dbmate
+- The database is migrated by running something like in the backend folder: 
 
 ```
 dotenv dbmate up
